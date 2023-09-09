@@ -11,7 +11,7 @@ The aim of this code is to compare various path-finding algorithms. The purpose 
 
 The maze.py code creates an svg image of the maze. A screenshot of a 10x10 maze is shown below
 
-<p align="center">
+<p align="left">
   <img width="400" src="images/maze_10_10.png">
 </p>
 
