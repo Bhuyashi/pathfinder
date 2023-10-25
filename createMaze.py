@@ -67,7 +67,7 @@ def drawPointer(scell,ix,iy):
     if scell.walls['S']:
         pygame.draw.line(SCREEN,WHITE,(x,y+blockSize),(x+blockSize,y+blockSize),1)
 
-grid_size = 5
+grid_size = 15
 maze = Maze(grid_size,grid_size)
 main(grid_size)
 maze.write_svg('maze.svg')
