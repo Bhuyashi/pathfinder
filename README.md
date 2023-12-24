@@ -6,6 +6,8 @@ The aim of this project is to first create a maze and then compare various path-
 
 1. **maze.py** - It has the class Maze which constructs the maze in which the search algorithms will work
 2. **createMaze.py** - It provides a visual representation of how the maze is constructed using depth-first search
+3. **pathfinder.py** - It constructs a maze and runs different path finding algorithms given any start and end point
+4. **dfs.py** - It contains the DFS class which helps perform Depth-First Search on the maze
 
 ## Result
 

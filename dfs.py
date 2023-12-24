@@ -35,8 +35,3 @@ class DFS():
             ix,iy = next_cell.x,next_cell.y
         return cell,ix,iy
 
-if __name__ == '__main__':
-    maze = Maze(10,10)
-    start_cell = (maze.nx,maze.ny)
-    end_cell = (0,0)
-    dfs = DFS(maze,start_cell,end_cell)
