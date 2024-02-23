@@ -2,6 +2,7 @@ import pygame
 import time
 from maze import Maze
 from dfs import *
+from bfs import *
 
 # Light theme
 # BLACK = (0, 0, 0)
@@ -30,13 +31,16 @@ def print_path(maze,start_cell,end_cell,algorithm):
     SCREEN.fill(WHITE)
 
     display_maze(maze)
-    ix,iy = start_cell
+    xs,ys = start_cell
+    ix,iy = xs,ys
     xe,ye = end_cell
     end_point = pygame.Rect(xe*blockSize, ye*blockSize, blockSize, blockSize)
     pygame.draw.rect(SCREEN, GREEN, end_point, 0)
 
     next_time = 0
     flag = 1
+    last = 0
+    backtrack_list = []
 
     while True:
 
@@ -44,10 +48,19 @@ def print_path(maze,start_cell,end_cell,algorithm):
         if curr_time > next_time:
             next_time = curr_time+100
             if flag==1:             
-                if ix==xe and iy==ye:
-                    if len(algorithm.visited )>0:
-                        bx,by = algorithm.visited.pop(-1)
-                        new_cell = maze.cell_at(bx,by)        
+                if ix==xe and iy==ye and last==0: 
+                    last = 1
+                    if algorithm.name == 'bfs':
+                        while((ix,iy) != (xs,ys)):
+                            last_cell = maze.cell_at(ix,iy)
+                            ix,iy = last_cell.parent
+                            backtrack_list.append((ix,iy))
+                    elif algorithm.name == 'dfs':
+                        backtrack_list = algorithm.visited[::-1]
+                elif last==1:
+                    if len(backtrack_list)>0:
+                        bx,by = backtrack_list.pop(0)
+                        new_cell = maze.cell_at(bx,by)
                     backtrack(bx,by,new_cell)     
                 else:
                     start_cell,ix,iy = algorithm.run(maze,ix,iy)
@@ -97,13 +110,16 @@ def backtrack(ix,iy,cell):
     draw_wall(cell,ix,iy)
 
 if __name__ == '__main__':
-    grid_size = 15
+    grid_size = 20
     maze = Maze(grid_size,grid_size)
     maze.build_maze() 
-    # start_cell = (maze.nx-1,maze.ny-1)
-    start_cell = (maze.nx//2,maze.ny//2)
+    start_cell = (maze.nx-1,maze.ny-1)
+    # start_cell = (maze.nx//2,maze.ny//2)
     end_cell = (0,0)
     # end_cell = (maze.nx//2,maze.ny//2)
 
     dfs = DFS(maze,start_cell,end_cell)
     print_path(maze,start_cell,end_cell,dfs)
+
+    # bfs = BFS(maze,start_cell,end_cell)
+    # print_path(maze,start_cell,end_cell,bfs)
