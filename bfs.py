@@ -2,9 +2,6 @@ from maze import *
 
 class BFS():
     def __init__(self,maze,start_cell,end_cell):
-        xs,ys = start_cell
-        xe,ye = end_cell
-        nx,ny = maze.nx,maze.ny
         self.visited = []
         self.done = []
         self.queue = []

@@ -23,6 +23,8 @@ With the createMaze.py we can view how the algorithm constructs the maze. The vi
 <video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/4fc3dae7-fd64-4ddb-8ca5-f9761b191d89' />
 </div>
 
+### Depth First Search (DFS)
+
 The pathfinder.py creates a maze of size 15x15 and runs the DFS algorithm on it. The start point is the center of the maze and the end point is marked in green. Once it reaches the end it backtracks the optimal path in pink.
 
 <div align="center">

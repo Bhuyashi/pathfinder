@@ -6,6 +6,7 @@ class Cell():
         self.walls = {'N':True, 'E':True, 'W':True, 'S':True,}
         self.opp_wall = {'N':'S','E':'W','W':'E','S':'N'}
         self.parent = (0,0)
+        self.G, self.H = 0,0
     
     def break_wall(self,neighbour,direction):
         self.walls[direction] = False

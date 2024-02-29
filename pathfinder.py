@@ -113,8 +113,8 @@ if __name__ == '__main__':
     grid_size = 20
     maze = Maze(grid_size,grid_size)
     maze.build_maze() 
-    start_cell = (maze.nx-1,maze.ny-1)
-    # start_cell = (maze.nx//2,maze.ny//2)
+    # start_cell = (maze.nx-1,maze.ny-1)
+    start_cell = (maze.nx//2,maze.ny//2)
     end_cell = (0,0)
     # end_cell = (maze.nx//2,maze.ny//2)
 
