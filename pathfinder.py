@@ -3,6 +3,7 @@ import time
 from maze import Maze
 from dfs import *
 from bfs import *
+from astar import *
 
 # Light theme
 # BLACK = (0, 0, 0)
@@ -46,11 +47,11 @@ def print_path(maze,start_cell,end_cell,algorithm):
 
         curr_time = pygame.time.get_ticks()
         if curr_time > next_time:
-            next_time = curr_time+100
+            next_time = curr_time+20
             if flag==1:             
                 if ix==xe and iy==ye and last==0: 
                     last = 1
-                    if algorithm.name == 'bfs':
+                    if algorithm.name == 'bfs' or algorithm.name == 'astar':
                         while((ix,iy) != (xs,ys)):
                             last_cell = maze.cell_at(ix,iy)
                             ix,iy = last_cell.parent
@@ -113,13 +114,16 @@ if __name__ == '__main__':
     grid_size = 20
     maze = Maze(grid_size,grid_size)
     maze.build_maze() 
-    # start_cell = (maze.nx-1,maze.ny-1)
-    start_cell = (maze.nx//2,maze.ny//2)
+    start_cell = (maze.nx-1,maze.ny-1)
+    # start_cell = (maze.nx//2,maze.ny//2)
     end_cell = (0,0)
     # end_cell = (maze.nx//2,maze.ny//2)
 
     dfs = DFS(maze,start_cell,end_cell)
     print_path(maze,start_cell,end_cell,dfs)
 
-    # bfs = BFS(maze,start_cell,end_cell)
-    # print_path(maze,start_cell,end_cell,bfs)
+    bfs = BFS(maze,start_cell,end_cell)
+    print_path(maze,start_cell,end_cell,bfs)
+
+    astar = AStar(maze,start_cell,end_cell)
+    print_path(maze,start_cell,end_cell,astar)
