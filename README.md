@@ -25,11 +25,35 @@ With the createMaze.py we can view how the algorithm constructs the maze. The vi
 
 ### Depth First Search (DFS)
 
-The pathfinder.py creates a maze of size 15x15 and runs the DFS algorithm on it. The start point is the center of the maze and the end point is marked in green. Once it reaches the end it backtracks the optimal path in pink.
+Below the pathfinder.py creates a maze of size 20x20 and runs the DFS algorithm on it. The start point is the right-bottom corner of the maze and the end point is marked in green. Once it reaches the end it backtracks the optimal path in pink.
 
 <div align="center">
-<video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/8234b6c8-8462-4aae-a621-884812a7033e' />
+<video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/44d23f77-5d62-4521-bfdf-0fb9707403ef' />
 </div>
+
+### Breadth First Search (BFS)
+
+The BFS algorithm is run on the same maze to compare the algorithms.
+
+<div align="center">
+<video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/7930a7c4-dfa4-4dbb-8b81-c6caf0e12a2c' />
+</div>
+
+### A-Star
+
+The A-Star algorithm uses a heuristic rather than blindly trying to find a path. The heuristic used here is Manhattan distance. The A-Star algorithm on the above maze is shown below.
+
+<div align="center">
+<video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/a8863b3d-e92c-406c-bccb-e90651dc183d' />
+</div>
+
+
+
+
+
+
+
+
 
 
 
