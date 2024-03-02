@@ -2,12 +2,14 @@
 
 ## Setup
 
-The aim of this project is to first create a maze and then compare various path-finding algorithms. The purpose of each of the files is as follows:
+This project aims to first create a maze and then compare various path-finding algorithms. The purpose of each of the files is as follows:
 
 1. **maze.py** - It has the class Maze which constructs the maze in which the search algorithms will work
 2. **createMaze.py** - It provides a visual representation of how the maze is constructed using a depth-first search
 3. **pathfinder.py** - It constructs a maze and runs different path-finding algorithms given any start and end point
 4. **dfs.py** - It contains the DFS class which helps perform a Depth-First Search on the maze
+5. **dfs.py** - It contains the BFS class which helps perform a Breadth-First Search on the maze
+6. **astar.py** - It contains the AStar class which helps perform a heuristic-based search on the maze
 
 ## Result
 
@@ -27,8 +29,8 @@ With the createMaze.py we can view how the algorithm constructs the maze. The vi
 
 Below the pathfinder.py creates a maze of size 20x20 and runs the DFS algorithm on it. The start point is the right-bottom corner of the maze and the end point is marked in green. Once it reaches the end it backtracks the optimal path in pink.
 
-<div align="center">
-<video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/44d23f77-5d62-4521-bfdf-0fb9707403ef' />
+<div align="center" >
+<video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/44d23f77-5d62-4521-bfdf-0fb9707403ef' width="100"/>
 </div>
 
 ### Breadth First Search (BFS)
@@ -36,7 +38,9 @@ Below the pathfinder.py creates a maze of size 20x20 and runs the DFS algorithm 
 The BFS algorithm is run on the same maze to compare the algorithms.
 
 <div align="center">
-<video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/7930a7c4-dfa4-4dbb-8b81-c6caf0e12a2c' />
+<video width="500" height="500" controls> 
+  <source src='https://github.com/Bhuyashi/pathfinder/assets/28145026/7930a7c4-dfa4-4dbb-8b81-c6caf0e12a2c' />
+</video>
 </div>
 
 ### A-Star
