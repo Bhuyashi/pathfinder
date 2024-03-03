@@ -30,7 +30,7 @@ With the createMaze.py we can view how the algorithm constructs the maze. The vi
 Below the pathfinder.py creates a maze of size 20x20 and runs the DFS algorithm on it. The start point is the right-bottom corner of the maze and the end point is marked in green. Once it reaches the end it backtracks the optimal path in pink.
 
 <div align="center" >
-<video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/44d23f77-5d62-4521-bfdf-0fb9707403ef' width="100"/>
+<video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/de7597ab-a6c6-4603-aa58-7e28fa69e949' />
 </div>
 
 ### Breadth First Search (BFS)
@@ -38,9 +38,7 @@ Below the pathfinder.py creates a maze of size 20x20 and runs the DFS algorithm 
 The BFS algorithm is run on the same maze to compare the algorithms.
 
 <div align="center">
-<video width="500" height="500" controls> 
-  <source src='https://github.com/Bhuyashi/pathfinder/assets/28145026/7930a7c4-dfa4-4dbb-8b81-c6caf0e12a2c' />
-</video>
+  <video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/3d5dfeb4-2bde-4440-8374-f7146f286d20' />
 </div>
 
 ### A-Star
@@ -48,8 +46,28 @@ The BFS algorithm is run on the same maze to compare the algorithms.
 The A-Star algorithm uses a heuristic rather than blindly trying to find a path. The heuristic used here is Manhattan distance. The A-Star algorithm on the above maze is shown below.
 
 <div align="center">
-<video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/a8863b3d-e92c-406c-bccb-e90651dc183d' />
+<video src='https://github.com/Bhuyashi/pathfinder/assets/28145026/a0dc3197-c9d6-4a91-9242-14d24b646603' />
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
